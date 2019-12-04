@@ -1,18 +1,767 @@
 <!DOCTYPE html>
-
 <html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>my-first-website</title>
-  <LINK href="styles.css" rel="stylesheet" type="text/css">
-</head>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.knightlab.com/libs/storymapjs/latest/css/storymap.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.knightlab.com/libs/storymapjs/latest/js/storymap-min.js"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=PT+Sans"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+      div {
+        font-family: "PT Sans", sans-serif;
+      }
+    </style>
+  </head>
 
-<body>
+  <body>
+    <div id="mapdiv" style="width: 100%; height: 600px;"></div>
 
-<img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" id="octocat" alt="octocat-gif" />
+    <script>
+      var storymap_options = { calculate_zoom: false };
 
-<!-- Change this code here by copy and pasting your template on line 15 -->
-<p>Welcome to your first GitHub Pages website!</p>
+      var storymap_data = {
+        storymap: {
+          call_to_action: true,
+          zoomify: false,
+          slides: [
+            {
+              date: "",
+              media: { url: "", caption: "", credit: "" },
+              type: "overview",
+              location: { line: true },
+              text: {
+                headline: "",
+                text:
+                  "Explore&nbsp;the Sites of Memory of the War and experience&nbsp;them through people's stories.<br><br>These stories combine to create an account of the past, critical to healing the wounds of war.&nbsp;<br>&nbsp;<br><br><br>"
+              }
+            },
+            {
+              date: "",
+              media: {
+                url:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/Bachoura by cdn3_Fotor.jpg",
+                caption: "",
+                credit: ""
+              },
+              location: {
+                iconSize: [72, 48],
+                lon: 35.503950119018555,
+                zoom: 16,
+                lat: 33.89157870127415,
+                line: true,
+                use_custom_marker: true,
+                icon:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/Bachoura by cdn3_Fotor.jpg"
+              },
+              text: {
+                headline: "BACHOURA",
+                text:
+                  'It is reported that many of those who were abducted\u2014Muslims and\nChristians\u2014were executed. This event, also known as Black Thursday, marked the\nbeginning of widespread sectarian based abductions.<br><br><a href="http://mapofmemorylebanon.webflow.io/en/sites/bashura" target="_blank" rel="">Click here for more</a>'
+              }
+            },
+            {
+              date: "",
+              media: {
+                url:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/Saifi-Blog Baladi_Fotor.jpg",
+                caption: "",
+                credit: "Blog Baladi"
+              },
+              location: {
+                iconSize: [72, 54],
+                lon: 35.51794052124023,
+                zoom: 16,
+                lat: 33.89799074074113,
+                line: true,
+                use_custom_marker: true,
+                icon:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/Saifi-Blog Baladi_Fotor.jpg"
+              },
+              text: {
+                headline: "PORT DISTRICT",
+                text:
+                  'It is reported that 300 people were kidnapped that day. Their fates\nremain unknown.&nbsp;This event came to be known as \u201cBlack Saturday\u201d.<br><br><a href="http://mapofmemorylebanon.webflow.io/en/sites/port" target="_blank" rel="">Click here for more</a>'
+              }
+            },
+            {
+              date: "",
+              media: {
+                url:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/rsz_karantina_photo4.jpg",
+                caption: "Glimpse into Karantina today.",
+                credit: "ACT"
+              },
+              location: {
+                iconSize: [72, 48],
+                lon: 35.53544998168945,
+                zoom: 15,
+                lat: 33.9007513314816,
+                line: true,
+                use_custom_marker: true,
+                icon:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/rsz_karantina_photo4.jpg"
+              },
+              text: {
+                headline: "KARANTINA",
+                text:
+                  '<p><strong>\u201c</strong><em>On that day,\na lot of people died. They dug a big hole and they buried them all at once.\nTheir bodies were never returned to their families; neither my brother\u2019s body\nnor my aunt\u2019s body nor my grandmother\u2019s body were ever returned or even found.\nNo one ever returned.</em>\u201d - Abu Mohammad, Resident of the area of Karantina</p><p><a href="http://mapofmemorylebanon.webflow.io/en/sites/karantina" target="_blank" rel="">Click for more</a></p>'
+              }
+            },
+            {
+              date: "",
+              media: {
+                url:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/rsz_damour_photo1.jpg",
+                caption: "Church in Damour today.",
+                credit: "ACT"
+              },
+              location: {
+                iconSize: [72, 48],
+                lon: 35.45485496520996,
+                zoom: 13,
+                lat: 33.72730216938414,
+                line: true,
+                use_custom_marker: true,
+                icon:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/rsz_damour_photo1.jpg"
+              },
+              text: {
+                headline: "DAMOUR",
+                text:
+                  '<span><em>"How can we forget what happened? We knew the Palestinians and Muslim forces were coming. It was our last night here. We had no time to take our belongings. In the church, 450 of us spent the night. "</em> - Georges, Survivor&nbsp;<br></span><br><a href="http://mapofmemorylebanon.webflow.io/en/sites/damour" target="_blank" rel="">Click here for more:&nbsp;</a><br>'
+              }
+            },
+            {
+              date: "",
+              media: {
+                url:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/Tal el Zaatar - Photo by almashriq_Fotor.jpg",
+                caption: "",
+                credit: ""
+              },
+              location: {
+                iconSize: [48, 72],
+                lon: 35.54909706115723,
+                zoom: 14,
+                lat: 33.86941783182514,
+                line: true,
+                use_custom_marker: true,
+                icon:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/Tal el Zaatar - Photo by almashriq_Fotor.jpg"
+              },
+              text: {
+                headline: "TAL EL ZAATAR",
+                text:
+                  '&nbsp;On August 12, 1976, it is estimated that between\n1,000 and 1,500 Palestinians were killed; some were summarily executed and\nother were kidnapped while fleeing towards West Beirut.<br><br><a href="http://mapofmemorylebanon.webflow.io/en/sites/tal-el-zaatar" target="_blank" rel="">Click here for more</a>'
+              }
+            },
+            {
+              date: "",
+              media: {
+                url:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/barbir_Fotor.jpg",
+                caption: "Street in Barbir today.",
+                credit: "ACT"
+              },
+              location: {
+                iconSize: [72, 40.5],
+                lon: 35.49927234649658,
+                zoom: 16,
+                lat: 33.895141004940875,
+                line: true,
+                use_custom_marker: true,
+                icon:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/barbir_Fotor.jpg"
+              },
+              text: {
+                headline: "BARBIR",
+                text:
+                  '<p><span><a target="" rel=""></a>\u201c<em>A bomb landed here once inside the\nstore and two customers died. They were two women, both of whom were medical\ndoctors. Nothing was left of them, but their shoes; just one shoe for each of\nthe two women actually</em>\u201d - Abu Khaled, resident of Barbir neighborhood</span></p><a href="http://mapofmemorylebanon.webflow.io/en/sites/barbir" target="_blank" rel="">Click here for more</a>'
+              }
+            },
+            {
+              date: "",
+              media: {
+                url:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/Musuem - PHOTOGRAPH BY MAHER ATTAR SYGMA VIA GETTY_Fotor.jpg",
+                caption: "",
+                credit: "ACT"
+              },
+              location: {
+                iconSize: [72, 48],
+                lon: 35.514936447143555,
+                zoom: 16,
+                lat: 33.87910946677703,
+                line: true,
+                use_custom_marker: true,
+                icon:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/Musuem - PHOTOGRAPH BY MAHER ATTAR SYGMA VIA GETTY_Fotor.jpg"
+              },
+              text: {
+                headline: "MATHAF",
+                text:
+                  '<p>\u201c<span><em>Once you reached the area of Mathaf, similar to any other area located\non any demarcation line; you will be met with battles, death and destruction</em>\u201d -\nElias, Former Combatant with Kataeb</span></p><p><a href="http://mapofmemorylebanon.webflow.io/en/sites/mathaf" target="_blank" rel="">Click here for more:&nbsp;</a><br></p>'
+              }
+            },
+            {
+              date: "",
+              media: {
+                url:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/Airport road - Photo by Mahmoud Kheir_Fotor.jpg",
+                caption: "",
+                credit: ""
+              },
+              location: {
+                iconSize: [72, 46.5],
+                lon: 35.49734115600586,
+                zoom: 14,
+                lat: 33.83449031726809,
+                line: true,
+                use_custom_marker: true,
+                icon:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/Airport road - Photo by Mahmoud Kheir_Fotor.jpg"
+              },
+              text: {
+                headline: "AIRPORT ROAD",
+                text:
+                  'Multiple checkpoints were established on several\noccasions leading to the kidnapping and disappearance of hundreds of people.<br><br><a href="http://mapofmemorylebanon.webflow.io/en/sites/airport-road" target="_blank" rel="">Click here for more</a>'
+              }
+            },
+            {
+              date: "",
+              media: {
+                url:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/lebanon_beirut_tallest_abandoned_Fotor.jpg",
+                caption: "The abandoned Burj El Murr today.",
+                credit:
+                  "Brandt Maxwell 2010 @ http://www.geographylists.com/beirut2.html"
+              },
+              location: {
+                iconSize: [48, 72],
+                lon: 35.496697425842285,
+                zoom: 16,
+                lat: 33.895532849260334,
+                line: true,
+                use_custom_marker: true,
+                icon:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/lebanon_beirut_tallest_abandoned_Fotor.jpg"
+              },
+              text: {
+                headline: "BURJ EL MURR",
+                text:
+                  '<p>\u201c<em>I look at this new generation, how\nthey are carefree and wonder to myself if they know what happened here and\nwhere they are stepping or dancing right now? Where they are parking their\ncars? Where\u2026 Our generation remembers every little thing that happened in any\ncorner. There are ghosts everywhere for us</em>\u201d -&nbsp;\nAline, photographer for Reuters from 1983 to 1989<br></p><p><a href="http://mapofmemorylebanon.webflow.io/en/sites/burj-el-mur" target="_blank" rel="">Click here for more</a></p>'
+              }
+            },
+            {
+              date: "",
+              media: {
+                url:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/American School Photo3_Fotor.jpg",
+                caption: "",
+                credit: "ACT"
+              },
+              location: {
+                iconSize: [72, 48],
+                lon: 35.83333,
+                zoom: 12,
+                lat: 34.43333,
+                line: true,
+                use_custom_marker: true,
+                icon:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/American School Photo3_Fotor.jpg"
+              },
+              text: {
+                headline: "AMERICAN SCHOOL",
+                text:
+                  '<em>\u201cThere was a popular saying: \u201cthose who are admitted (to the school) are bygones, and those who manage to leave (the school) are born again\u201d. </em>Khalil, Resident of the neighborhood<br><br><a href="http://mapofmemorylebanon.webflow.io/en/sites/american-school" target="_blank" rel="">Click here for more:&nbsp;</a><br><br>'
+              }
+            },
+            {
+              date: "",
+              media: { url: "", caption: "", credit: "" },
+              location: {
+                lat: 34.402519060216434,
+                line: true,
+                lon: 35.816802978515625,
+                zoom: 14
+              },
+              text: {
+                headline: "BARBARA",
+                text:
+                  'Many civilians were kidnapped at the Barbara checkpoint. It is at this\ncheckpoint that, on July 4, 1982, according to Lebanese media, four Iranian\ndiplomats - Ahmad Motevaselian, Seyyed Mohsen Mousavi, Taqi Rastegar Moqaddam,\nand Kazem Akhavan - were abducted. <br><br><a href="http://mapofmemorylebanon.webflow.io/en/sites/barbara" target="_blank" rel="">Click here for more</a>'
+              }
+            },
+            {
+              date: "",
+              media: {
+                url:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/al safir_Fotor.jpg",
+                caption: "",
+                credit: "Al Safir"
+              },
+              location: {
+                iconSize: [72, 48],
+                lon: 35.500946044921875,
+                zoom: 15,
+                lat: 33.86941783182514,
+                line: true,
+                use_custom_marker: true,
+                icon:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/al safir_Fotor.jpg"
+              },
+              text: {
+                headline: "SABRA AND SHATILA",
+                text:
+                  '<p>Survivors reported that family members\nincluding women and children were crammed into trucks by militiamen and taken\nto unknown destinations. These people were never seen again. More than 2,000\nunidentified bodies were buried in mass graves.</p><p><a href="http://mapofmemorylebanon.webflow.io/en/sites/sabra-and-shatila" target="_blank" rel="">Click here for more</a></p>'
+              }
+            },
+            {
+              date: "",
+              media: {
+                url:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/Protest of families of missing 1984 Beirut - Photo by righttoknow_Fotor.jpg",
+                caption: "",
+                credit: ""
+              },
+              location: {
+                iconSize: [72, 49.5],
+                lon: 35.49948692321777,
+                zoom: 16,
+                lat: 33.878860063498124,
+                line: true,
+                use_custom_marker: true,
+                icon:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/Protest of families of missing 1984 Beirut - Photo by righttoknow_Fotor.jpg"
+              },
+              text: {
+                headline: "GATHERING OF FAMILIES",
+                text:
+                  'On November 17, 1982, families who lacked information on the whereabouts\nof their relatives&nbsp;gathered for the \ufb01rst time at Corniche el Mazraa,\nBeirut. Hundreds of people, mostly women, gathered after the call of Wadad\nHalwani, whose husband Adnan, had been abducted.<br><br><a href="http://mapofmemorylebanon.webflow.io/en/sites/gathering-families" target="_blank" rel="">Click here for more</a>'
+              }
+            },
+            {
+              date: "",
+              media: {
+                url:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/Aley - Photo by dreamstime_Fotor.jpg",
+                caption: "Abandoned building complex in Aley today.",
+                credit: "ACT"
+              },
+              location: {
+                iconSize: [72, 48],
+                lon: 35.60565948486328,
+                zoom: 13,
+                lat: 33.81110228864701,
+                line: true,
+                use_custom_marker: true,
+                icon:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/Aley - Photo by dreamstime_Fotor.jpg"
+              },
+              text: {
+                headline: "ALEY",
+                text:
+                  "<p><strong>\u201c</strong>W<span><em>hen I walk there [\u2026] I start thinking to myself:\ntheir bodies are buried on the top of the mountain; their bodies are buried\nsomewhere around here. So, if I see a flower standing at a certain place, I\nimmediately think to myself: maybe their bones lay beneath here.</em>\u201d -- Suhad,\nwife of Salem Karam, disappeared in 1983 in the area of Aley.</span></p><p><br></p>"
+              }
+            },
+            {
+              date: "",
+              media: {
+                url:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/Khiam Denten Center - Electronicintifad_Fotor.jpg",
+                caption: "",
+                credit: ""
+              },
+              location: {
+                iconSize: [72, 54],
+                lon: 35.61286926269531,
+                zoom: 12,
+                lat: 33.33511774753217,
+                line: true,
+                use_custom_marker: true,
+                icon:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/Khiam Denten Center - Electronicintifad_Fotor.jpg"
+              },
+              text: {
+                headline: "KHIAM",
+                text:
+                  'Khiam was the main detention facility inside\nLebanon where the prisoners were detained before being transferred to Israel.<br><br><a href="http://mapofmemorylebanon.webflow.io/en/sites/khiam" target="_blank" rel="">Click here for more</a>'
+              }
+            },
+            {
+              date: "",
+              media: {
+                url:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/Basta - Photo by Mohammad k_Fotor.jpg",
+                caption: "",
+                credit: ""
+              },
+              location: {
+                iconSize: [72, 72],
+                lon: 35.50384283065796,
+                zoom: 16,
+                lat: 33.886502161471434,
+                line: true,
+                use_custom_marker: true,
+                icon:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/Basta - Photo by Mohammad k_Fotor.jpg"
+              },
+              text: {
+                headline: "BASTA",
+                text:
+                  '&nbsp;In 1985, Hezbollah used a building located on\nBasta street, the Fathallah Barrack, as a detention center where many\nindividuals, both Lebanese and foreigners, were detained and interrogated.<br><br><a href="http://mapofmemorylebanon.webflow.io/en/sites/basta" target="_blank" rel="">Click here for more</a>'
+              }
+            },
+            {
+              date: "",
+              media: {
+                url:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/central-bank-aljoumhouria_Fotor_Fotor.jpg",
+                caption: "",
+                credit: ""
+              },
+              location: {
+                iconSize: [72, 51.6],
+                lon: 35.488929748535156,
+                zoom: 16,
+                lat: 33.89588906980654,
+                line: true,
+                use_custom_marker: true,
+                icon:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/central-bank-aljoumhouria_Fotor_Fotor.jpg"
+              },
+              text: {
+                headline: "CENTRAL BANK",
+                text:
+                  'Dozens of people were kidnapped and detained at\nthese checkpoints, most notably the three central bank executives and directors\nwhom were kidnapped on August 19th, 1985, never to be seen\nagain.&nbsp;&nbsp; <br><br><a href="http://mapofmemorylebanon.webflow.io/en/sites/central-bank" target="_blank" rel="">Click here for more</a>'
+              }
+            },
+            {
+              date: "",
+              media: {
+                url:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/Corniche el Mazraa 2 - blogspot_Fotor.jpg",
+                caption: "",
+                credit: ""
+              },
+              location: {
+                iconSize: [72, 40.5],
+                lon: 35.50137519836426,
+                zoom: 16,
+                lat: 33.87868191785262,
+                line: true,
+                use_custom_marker: true,
+                icon:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/Corniche el Mazraa 2 - blogspot_Fotor.jpg"
+              },
+              text: {
+                headline: "Corniche el Maazra",
+                text:
+                  'On August 19th, 1985, 30 people were\nkidnapped at one of these checkpoints. Some were later released the same day\nwhile others remain missing to this day.<br><br><a href="http://mapofmemorylebanon.webflow.io/en/sites/corniche-el-mazraa" target="_blank" rel="">Click here for more</a>'
+              }
+            },
+            {
+              date: "",
+              media: {
+                url:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/Anjar 2 - ACT_Fotor_Fotor.jpg",
+                caption: "",
+                credit: ""
+              },
+              location: {
+                iconSize: [72, 54],
+                lon: 35.92803955078125,
+                zoom: 12,
+                lat: 33.73290566922855,
+                line: true,
+                use_custom_marker: true,
+                icon:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/Anjar 2 - ACT_Fotor_Fotor.jpg"
+              },
+              text: {
+                headline: "Anjar",
+                text:
+                  'People kidnapped by Syrian forces and its allies\nwere first held in detention centers present all over the territory and\nprisoners who survived interrogations or weren\u2019t released were transferred to\nAnjar detention center, the last stop inside Lebanon before being extra-judicially\ntransferred into Syrian jails and kept secretly detained.&nbsp;<br><br><a href="http://mapofmemorylebanon.webflow.io/en/sites/anjar" target="_blank" rel="">Click here for more</a>'
+              }
+            },
+            {
+              date: "",
+              media: {
+                url:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/March of Peace - Photo by iphu_Fotor.jpg",
+                caption: "",
+                credit: ""
+              },
+              location: {
+                iconSize: [72, 36.5],
+                lon: 36.07704162597656,
+                zoom: 11,
+                lat: 34.551811369170494,
+                line: true,
+                use_custom_marker: true,
+                icon:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/March of Peace - Photo by iphu_Fotor.jpg"
+              },
+              text: {
+                headline: "March of Peace",
+                text:
+                  '<p>\u201c<span><em>During the war, there\nwas no way you could\u2019ve crossed a checkpoint without showing your\nidentification card. We were the first to break those checkpoints and cross\nthrough without any of the militias asking us of any identification cards</em>\u201d - Jahda\nAbou Khalil, Co-founder of the March of Peace</span></p><p><a href="http://mapofmemorylebanon.webflow.io/en/sites/march-for-peace" target="_blank" rel="">Click here for more:&nbsp;</a><br></p>'
+              }
+            },
+            {
+              date: "",
+              media: {
+                url:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/Beau Rivage - ACT_Fotor.jpg",
+                caption: "",
+                credit: ""
+              },
+              location: {
+                iconSize: [54, 72],
+                lon: 35.484960079193115,
+                zoom: 15,
+                lat: 33.877096405223554,
+                line: true,
+                use_custom_marker: true,
+                icon:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/Beau Rivage - ACT_Fotor.jpg"
+              },
+              text: {
+                headline: "Beau Rivage",
+                text:
+                  'Most of those who weren\u2019t released were later sent to\nthe Syrian Main Intelligence Headquarters in Anjar before being transferred to\nSyria where they would be detained in secret. The building was a feared symbol\nof Syrian power in Lebanon.<br><br><a href="http://mapofmemorylebanon.webflow.io/en/sites/beau-rivage" target="_blank" rel="">Click here for more</a>'
+              }
+            },
+            {
+              date: "",
+              media: {
+                url:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/Sydnaya prison Syria - Photo by 78_Fotor.jpg",
+                caption: "",
+                credit: ""
+              },
+              location: {
+                iconSize: [72, 49.5],
+                lon: 36.32955551147461,
+                zoom: 12,
+                lat: 33.66863977806523,
+                line: true,
+                use_custom_marker: true,
+                icon:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/Sydnaya prison Syria - Photo by 78_Fotor.jpg"
+              },
+              text: { headline: "SEDNAYA PRISON", text: "" }
+            },
+            {
+              date: "",
+              media: {
+                url:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/Tadmor Prison - Photo by middleeasteye.png",
+                caption: "",
+                credit: ""
+              },
+              location: {
+                iconSize: [57.6, 36],
+                lon: 38.28537940979004,
+                zoom: 12,
+                lat: 34.55852677427239,
+                line: true,
+                use_custom_marker: true,
+                icon:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/Tadmor Prison - Photo by middleeasteye.png"
+              },
+              text: {
+                headline: "TADMOR PRISON",
+                text:
+                  'Lebanese citizens whom were detained by local militias allied with the\nSyrian regime were reportedly transferred to prison in Syria. Family\nassociations and NGOs have documented over 600 such cases, with strong evidence\nto support such claims including the testimonies of some former detainees who\nwere released over the years from Syrian prisons. <br><br><a href="http://mapofmemorylebanon.webflow.io/en/sites/tadmor" target="_blank" rel="">Click here for more</a><br><br>'
+              }
+            },
+            {
+              date: "",
+              media: { url: "", caption: "", credit: "" },
+              location: {
+                lat: 33.49187567990291,
+                line: true,
+                lon: 36.31959915161133,
+                zoom: 12
+              },
+              text: {
+                headline: "BRANCH 235 - KNOWN AS PALESTINE BRANCH",
+                text:
+                  '<span>Lebanese citizens whom were detained by local militias allied with the\nSyrian regime were reportedly transferred to prison in Syria. Family\nassociations and NGOs have documented over 600 such cases, with strong evidence\nto support such claims including the testimonies of some former detainees who\nwere released over the years from Syrian prisons. <br><br><a href="http://mapofmemorylebanon.webflow.io/en/sites/palestine-branch" target="_blank" rel="">Click here for more</a><br><br></span>'
+              }
+            },
+            {
+              date: "",
+              media: { url: "", caption: "", credit: "" },
+              location: {
+                lat: 33.667639706749476,
+                line: true,
+                lon: 35.67084789276123,
+                zoom: 11
+              },
+              text: {
+                headline: "MAASER CHOUF",
+                text:
+                  'In 1995, in the village of&nbsp;Maaser Chouf, human\nremains&nbsp;were&nbsp;exhumed&nbsp;from two mass graves and placed in\na&nbsp;grave&nbsp;behind the local church.&nbsp;<br><br><a href="http://mapofmemorylebanon.webflow.io/en/sites/maaser-chouf" target="_blank" rel="">Click here for more</a>'
+              }
+            },
+            {
+              date: "",
+              media: { url: "", caption: "", credit: "" },
+              location: {
+                lat: 33.84229678665427,
+                line: true,
+                lon: 35.55308818817139,
+                zoom: 14
+              },
+              text: {
+                headline: "YARZE - MINISTRY OF DEFENSE",
+                text:
+                  'On November 2005, seven months after the withdrawal of Syrian forces\nfrom Lebanon, the remains of 24 military personnel were discovered on the\ngrounds of the Ministry of National Defense in Yarzeh.<br><br><a href="http://mapofmemorylebanon.webflow.io/en/sites/yarze" target="_blank" rel="">Click here for more</a>'
+              }
+            },
+            {
+              date: "",
+              media: {
+                url:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/Location of Discovery-Alec Colett - Photo by alraimedia_Fotor.jpg",
+                caption: "",
+                credit: ""
+              },
+              location: {
+                iconSize: [72, 43.5],
+                lon: 35.906410217285156,
+                zoom: 13,
+                lat: 33.6462068132545,
+                line: true,
+                use_custom_marker: true,
+                icon:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/Location of Discovery-Alec Colett - Photo by alraimedia_Fotor.jpg"
+              },
+              text: {
+                headline: "AITA AL-FOUKHAR",
+                text:
+                  '<span>Collett\u2019s remains were exhumed by a team of British experts working in\nco-operation with the Lebanese authorities in the Bekaa Valley. A second body\nwas found at the site but the Lebanese authorities decided to rebury the\nremains without conducting any identification.<br><br><a href="http://mapofmemorylebanon.webflow.io/en/sites/aita-al-foukhar" target="_blank" rel="">Click here for more</a></span>'
+              }
+            },
+            {
+              date: "",
+              media: {
+                url:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/Tahwita cemetery - Photo by angloamericancemeterybeirut_Fotor.jpg",
+                caption: "",
+                credit: ""
+              },
+              location: {
+                iconSize: [72, 54],
+                lon: 35.52432954311371,
+                zoom: 15,
+                lat: 33.877301276490215,
+                line: true,
+                use_custom_marker: true,
+                icon:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/Tahwita cemetery - Photo by angloamericancemeterybeirut_Fotor.jpg"
+              },
+              text: {
+                headline: "TAHWITA CEMETERY",
+                text:
+                  '<span>"<em>Some of the bodies were buried in mass graves in the martyrs cemeteries in the area of Horsh in Beirut as well as in the cemetery of Mar Metr in Ashrafieh, and in the English cemetery in Tahwita. Some of the bodies were also thrown in the sea</em>". Official Report of the National Investigative Commission, 2000.<br><br></span><a href="http://mapofmemorylebanon.webflow.io/en/sites/tahwita" target="_blank" rel="">Click here for more:&nbsp;</a><strong><br></strong>'
+              }
+            },
+            {
+              date: "",
+              media: {
+                url:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/Mar Mitr.jpg",
+                caption: "",
+                credit: ""
+              },
+              location: {
+                iconSize: [72, 48],
+                lon: 35.52149176597595,
+                zoom: 15,
+                lat: 33.89066138399025,
+                line: true,
+                use_custom_marker: true,
+                icon:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/Mar Mitr.jpg"
+              },
+              text: {
+                headline: "MAR MITR CEMETERY",
+                text:
+                  '"<em>Some of the bodies were buried in mass graves in the martyrs cemeteries in the area of Horsh in Beirut as well as in the cemetery of Mar Metr in Ashrafieh, and in the English cemetery in Tahwita. Some of the bodies were also thrown in the sea</em>". Official Report of the National Investigative Commission, 2000.<br><br><a href="http://mapofmemorylebanon.webflow.io/en/sites/mar-mitr" target="_blank" rel="">Click here for more:&nbsp;</a>'
+              }
+            },
+            {
+              date: "",
+              media: {
+                url:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/Horsh cemetery 2 - photo by hello961 (1)_Fotor.jpg",
+                caption: "",
+                credit: ""
+              },
+              location: {
+                iconSize: [72, 54],
+                lon: 35.505194664001465,
+                zoom: 15,
+                lat: 33.869631629760406,
+                line: true,
+                use_custom_marker: true,
+                icon:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/Horsh cemetery 2 - photo by hello961 (1)_Fotor.jpg"
+              },
+              text: {
+                headline: "HORSH BEIRUT",
+                text:
+                  '"<em>Some of the bodies were buried in mass graves in the martyrs cemeteries in the area of Horsh in Beirut as well as in the cemetery of Mar Metr in Ashrafieh, and in the English cemetery in Tahwita. Some of the bodies were also thrown in the sea</em>". Official Report of the National Investigative Commission, 2000.<br><br><a href="http://mapofmemorylebanon.webflow.io/en/sites/horch" target="_blank" rel="">Click here for more:&nbsp;</a>'
+              }
+            },
+            {
+              date: "",
+              media: {
+                url:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/LU_Hasan Shaaban_Daily Star _Fotor.jpg",
+                caption: "",
+                credit: ""
+              },
+              location: {
+                iconSize: [72, 46.5],
+                lon: 35.522918701171875,
+                zoom: 14,
+                lat: 33.8297134044724,
+                line: true,
+                use_custom_marker: true,
+                icon:
+                  "http://uploads.knightlab.com/storymapjs/fbb70813e6869662a52896a717be1b4e/sites-of-memory/_images/LU_Hasan Shaaban_Daily Star _Fotor.jpg"
+              },
+              text: { headline: "LEBANESE UNIVERSITY HADATH", text: "" }
+            }
+          ],
+          map_access_token:
+          "pk.eyJ1IjoiYXNwZWwxNiIsImEiOiJjazFrcTFreWQxaWQwM25wNnB5OGtob2cyIn0.z-P2ljsucUiDSe9lpECDMA",
+          map_type: "mapbox:mapbox://styles/aspel16/cj4b7xltt480r2rnr34001yps",  
+          call_to_action_text: "",
+          map_as_image: true,
+          map_subdomains: "abcd"
+        }
+      };
 
-</body>
+      var storymap = new VCO.StoryMap(
+        "mapdiv",
+        storymap_data,
+        storymap_options
+      );
+      window.onresize = function(event) {
+        storymap.updateDisplay();
+      };
+    </script>
+  </body>
 </html>
